@@ -1,0 +1,32 @@
+
+.about {
+  .about-image {
+    width: 100%;
+    height: auto;
+  }
+
+  b {
+    color: lighten($grey, 15);
+  }
+
+  a {
+    display: inline-block;
+  }
+
+  @media (min-width: 768px) {
+  }
+
+  @media (min-width: 992px) {
+  	.about-text {
+      // margin: 0px 50px;
+    }
+    
+    .about-image {
+      // width: 40%;
+      padding: 25px;
+      padding-right: 0px;
+      border-radius: 5px;
+   }
+  }
+
+}

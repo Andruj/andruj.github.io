@@ -1,0 +1,38 @@
+// bower:scss
+// endbower
+
+@import 'partials/variables';
+@import 'partials/fonts';
+@import 'partials/components';
+
+@import 'partials/header';
+@import 'partials/work';
+@import 'partials/contact';
+@import 'partials/about';
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+.separator {
+  display: none;
+}
+
+.footer {
+  margin: 0;
+  padding-bottom: 10px
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+}

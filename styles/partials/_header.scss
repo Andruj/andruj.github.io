@@ -1,0 +1,48 @@
+.header {
+  position: relative;
+  height: 100%;
+
+  .header-container {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-right: -50%;
+  }
+
+  .header-name {
+    margin: 5px 0px;
+  }
+
+  .header-skill, .header-skill-mobile {
+    margin: 5px 0px;
+    text-align: right;
+  }
+
+  .header-skill {
+    display: none;
+  }
+
+  .header-skill-mobile {
+    display: block;
+  }
+
+
+  @media (min-width: 768px) {
+    .header-container {
+          left: 75%;
+          top: 50%;
+    }
+    .header-skill-mobile {
+      display: none;
+    }
+
+    .header-skill {
+      display: block;
+    }
+  }
+
+  @media (min-width: 992px) {
+
+  }
+}
