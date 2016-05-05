@@ -1,0 +1,13 @@
+.panel {
+  height: 100%;
+  padding: 0;
+}
+
+.scrollable {
+  overflow-y: scroll;
+}
+
+map {
+  height: 100%;
+  width: 100%;
+}

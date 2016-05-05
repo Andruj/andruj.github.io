@@ -1,0 +1,22 @@
+nav {
+  cursor: pointer;
+}
+
+.chip {
+  margin-bottom: 5px;
+}
+
+.chip:hover {
+  background: #f44336;
+  color: white;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.brand-logo {
+  padding-left: 20px;
+}
+
+.radio-buttons {
+  padding: 25px;
+}

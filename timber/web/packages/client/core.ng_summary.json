@@ -1,0 +1,86 @@
+{
+  "ngDeps": {
+    "1": "core",
+    "3": [
+      {
+        "1": "dart:async",
+        "5": false
+      },
+      {
+        "1": "dart:convert",
+        "5": false
+      },
+      {
+        "1": "dart:html",
+        "2": [
+          "HttpRequest"
+        ],
+        "5": false
+      },
+      {
+        "1": "package:angular2/core.dart",
+        "5": false
+      }
+    ],
+    "6": "core.dart"
+  },
+  "type": {
+    "Closeable": {
+      "class": "Identifier",
+      "name": "Closeable",
+      "moduleUrl": "asset:client/lib/core.dart",
+      "prefix": null,
+      "constConstructor": null,
+      "value": null
+    },
+    "Openable": {
+      "class": "Identifier",
+      "name": "Openable",
+      "moduleUrl": "asset:client/lib/core.dart",
+      "prefix": null,
+      "constConstructor": null,
+      "value": null
+    },
+    "Linkable": {
+      "class": "Identifier",
+      "name": "Linkable",
+      "moduleUrl": "asset:client/lib/core.dart",
+      "prefix": null,
+      "constConstructor": null,
+      "value": null
+    },
+    "Selectable": {
+      "class": "Identifier",
+      "name": "Selectable",
+      "moduleUrl": "asset:client/lib/core.dart",
+      "prefix": null,
+      "constConstructor": null,
+      "value": null
+    },
+    "Routable": {
+      "class": "Identifier",
+      "name": "Routable",
+      "moduleUrl": "asset:client/lib/core.dart",
+      "prefix": null,
+      "constConstructor": null,
+      "value": null
+    },
+    "Decodeable": {
+      "class": "Identifier",
+      "name": "Decodeable",
+      "moduleUrl": "asset:client/lib/core.dart",
+      "prefix": null,
+      "constConstructor": null,
+      "value": null
+    },
+    "Mappable": {
+      "class": "Identifier",
+      "name": "Mappable",
+      "moduleUrl": "asset:client/lib/core.dart",
+      "prefix": null,
+      "constConstructor": null,
+      "value": null
+    }
+  },
+  "alias": {}
+}
