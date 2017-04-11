@@ -1,0 +1,315 @@
+{
+  "ngDeps": {
+    "1": "services",
+    "3": [
+      {
+        "1": "dart:async",
+        "5": false
+      },
+      {
+        "1": "dart:mirrors",
+        "5": false
+      },
+      {
+        "1": "package:angular2/core.dart",
+        "5": false
+      },
+      {
+        "1": "package:client/models.dart",
+        "5": false
+      },
+      {
+        "1": "package:client/core.dart",
+        "5": false
+      }
+    ],
+    "5": [
+      {
+        "1": "Service",
+        "4": [
+          {
+            "1": "Injectable",
+            "4": false,
+            "5": false,
+            "6": false,
+            "7": true,
+            "8": false
+          }
+        ]
+      },
+      {
+        "1": "RestService",
+        "4": [
+          {
+            "1": "Injectable",
+            "4": false,
+            "5": false,
+            "6": false,
+            "7": true,
+            "8": false
+          }
+        ],
+        "5": [
+          {
+            "1": "Type",
+            "4": "model"
+          }
+        ]
+      },
+      {
+        "1": "LocationService",
+        "4": [
+          {
+            "1": "Injectable",
+            "4": false,
+            "5": false,
+            "6": false,
+            "7": true,
+            "8": false
+          }
+        ]
+      },
+      {
+        "1": "TagService",
+        "4": [
+          {
+            "1": "Injectable",
+            "4": false,
+            "5": false,
+            "6": false,
+            "7": true,
+            "8": false
+          }
+        ]
+      },
+      {
+        "1": "MenuStore",
+        "4": [
+          {
+            "1": "Injectable",
+            "4": false,
+            "5": false,
+            "6": false,
+            "7": true,
+            "8": false
+          }
+        ]
+      },
+      {
+        "1": "QueryStore",
+        "4": [
+          {
+            "1": "Injectable",
+            "4": false,
+            "5": false,
+            "6": false,
+            "7": true,
+            "8": false
+          }
+        ]
+      },
+      {
+        "1": "SettingsStore",
+        "4": [
+          {
+            "1": "Injectable",
+            "4": false,
+            "5": false,
+            "6": false,
+            "7": true,
+            "8": false
+          }
+        ]
+      },
+      {
+        "1": "FilterStore",
+        "4": [
+          {
+            "1": "Injectable",
+            "4": false,
+            "5": false,
+            "6": false,
+            "7": true,
+            "8": false
+          }
+        ]
+      }
+    ],
+    "6": "services.dart"
+  },
+  "type": {
+    "SINGLETON_PROVIDERS": {
+      "class": "Identifier",
+      "name": "SINGLETON_PROVIDERS",
+      "moduleUrl": "asset:client/lib/services.dart",
+      "prefix": null,
+      "constConstructor": null,
+      "value": [
+        {
+          "class": "Identifier",
+          "name": "LocationService",
+          "moduleUrl": null,
+          "prefix": null,
+          "constConstructor": null,
+          "value": null
+        },
+        {
+          "class": "Identifier",
+          "name": "MenuStore",
+          "moduleUrl": null,
+          "prefix": null,
+          "constConstructor": null,
+          "value": null
+        },
+        {
+          "class": "Identifier",
+          "name": "QueryStore",
+          "moduleUrl": null,
+          "prefix": null,
+          "constConstructor": null,
+          "value": null
+        },
+        {
+          "class": "Identifier",
+          "name": "SettingsStore",
+          "moduleUrl": null,
+          "prefix": null,
+          "constConstructor": null,
+          "value": null
+        },
+        {
+          "class": "Identifier",
+          "name": "TagService",
+          "moduleUrl": null,
+          "prefix": null,
+          "constConstructor": null,
+          "value": null
+        },
+        {
+          "class": "Identifier",
+          "name": "FilterStore",
+          "moduleUrl": null,
+          "prefix": null,
+          "constConstructor": null,
+          "value": null
+        }
+      ]
+    },
+    "Service": {
+      "class": "Type",
+      "name": "Service",
+      "moduleUrl": "asset:client/lib/services.dart",
+      "prefix": null,
+      "isHost": false,
+      "constConstructor": null,
+      "value": null,
+      "diDeps": []
+    },
+    "RestService": {
+      "class": "Type",
+      "name": "RestService",
+      "moduleUrl": "asset:client/lib/services.dart",
+      "prefix": null,
+      "isHost": false,
+      "constConstructor": null,
+      "value": null,
+      "diDeps": [
+        {
+          "token": {
+            "class": "Identifier",
+            "name": "Type",
+            "moduleUrl": null,
+            "prefix": null,
+            "constConstructor": null,
+            "value": null
+          },
+          "query": null,
+          "viewQuery": null,
+          "isAttribute": false,
+          "isSelf": false,
+          "isHost": false,
+          "isSkipSelf": false,
+          "isOptional": false
+        }
+      ]
+    },
+    "LocationService": {
+      "class": "Type",
+      "name": "LocationService",
+      "moduleUrl": "asset:client/lib/services.dart",
+      "prefix": null,
+      "isHost": false,
+      "constConstructor": null,
+      "value": null,
+      "diDeps": []
+    },
+    "TagService": {
+      "class": "Type",
+      "name": "TagService",
+      "moduleUrl": "asset:client/lib/services.dart",
+      "prefix": null,
+      "isHost": false,
+      "constConstructor": null,
+      "value": null,
+      "diDeps": []
+    },
+    "DataStore": {
+      "class": "Identifier",
+      "name": "DataStore",
+      "moduleUrl": "asset:client/lib/services.dart",
+      "prefix": null,
+      "constConstructor": null,
+      "value": null
+    },
+    "MenuStore": {
+      "class": "Type",
+      "name": "MenuStore",
+      "moduleUrl": "asset:client/lib/services.dart",
+      "prefix": null,
+      "isHost": false,
+      "constConstructor": null,
+      "value": null,
+      "diDeps": []
+    },
+    "QueryStore": {
+      "class": "Type",
+      "name": "QueryStore",
+      "moduleUrl": "asset:client/lib/services.dart",
+      "prefix": null,
+      "isHost": false,
+      "constConstructor": null,
+      "value": null,
+      "diDeps": []
+    },
+    "SettingsStore": {
+      "class": "Type",
+      "name": "SettingsStore",
+      "moduleUrl": "asset:client/lib/services.dart",
+      "prefix": null,
+      "isHost": false,
+      "constConstructor": null,
+      "value": null,
+      "diDeps": []
+    },
+    "FilterStore": {
+      "class": "Type",
+      "name": "FilterStore",
+      "moduleUrl": "asset:client/lib/services.dart",
+      "prefix": null,
+      "isHost": false,
+      "constConstructor": null,
+      "value": null,
+      "diDeps": []
+    }
+  },
+  "alias": {
+    "SINGLETON_PROVIDERS": [
+      "LocationService",
+      "MenuStore",
+      "QueryStore",
+      "SettingsStore",
+      "TagService",
+      "FilterStore"
+    ]
+  }
+}

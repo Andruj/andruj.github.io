@@ -1,0 +1,94 @@
+
+  <nav (click)="self.toggle()">
+    <div class="nav-wrapper green lighten-1">
+      <a href="#" class="brand-logo">Filter</a>
+      <ul id="nav-mobile" class="right">
+        <li>
+          <a>
+            <i *ngIf="!self.active" class="material-icons">add</i>
+            <i *ngIf="self.active" class="material-icons">clear</i>
+          </a>
+        </li>
+        <!-- Toggle when open -->
+        <!-- <li><a><i class="material-icons">clear</i></a></li> -->
+      </ul>
+    </div>
+  </nav>
+
+
+
+<div *ngIf="self.active" class="row">
+  <div class="col s12 l4">
+    <div class="row">
+      <form class="radio-buttons" action="#">
+        <p>
+          <input name="filter-group" type="radio" id="views" />
+          <label for="views">Views</label>
+        </p>
+        <p>
+          <input name="filter-group" type="radio" id="rating" />
+          <label for="rating">Rating</label>
+        </p>
+        <p>
+          <input name="filter-group" type="radio" id="reviews"  />
+          <label for="reviews">Reviews</label>
+        </p>
+          <p>
+            <input name="filter-group" type="radio" id="nearest"/>
+            <label for="nearest">Nearest</label>
+        </p>
+      </form>
+    </div>
+  </div>
+  <div class="col s12 l8">
+      <div class="row">
+        <form>
+          <div class="input-field col s12">
+            <input id="tag" type="text">
+            <label for="tag">Search by tag...</label>
+          </div>
+          <div class="switch col s12">
+            <label>
+              And
+              <input type="checkbox">
+              <span class="lever"></span>
+              Or
+            </label>
+          </div>
+        </form>
+      </div>
+
+      <!-- TAGS -->
+      <div class="row">
+        <div class="chip">
+          #mountainbiking
+          <i class="material-icons">close</i>
+        </div>
+        <div class="chip">
+          #climbing
+          <i class="material-icons">close</i>
+        </div>
+        <div class="chip">
+          #running
+          <i class="material-icons">close</i>
+        </div>
+        <div class="chip">
+          #familyfriendly
+          <i class="material-icons">close</i>
+        </div>
+        <div class="chip">
+          #familyfriendly
+          <i class="material-icons">close</i>
+        </div>
+        <div class="chip">
+          #familyfriendly
+          <i class="material-icons">close</i>
+        </div>
+        <div class="chip">
+          #familyfriendly
+          <i class="material-icons">close</i>
+        </div>
+
+      </div>
+  </div>
+</div>

@@ -1,0 +1,135 @@
+<html><head><title>Andrew Peterson</title><link href="/styles/bootstrap.min.css" rel="stylesheet"/><link href="/styles/prism.css" rel="stylesheet"/><link href="https://fonts.googleapis.com/css?family=Raleway|Anonymous+Pro:400,700" rel="stylesheet" type="text/css"/><link href="/styles/index.css" rel="stylesheet"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/></head><body id="article" class="container"><article class="row"><div class="col-xs-12"><h1>Querying Arrays in Mongoose</h1>
+<h6>author: <a href="https://twitter.com/andrwpeterson">@andrewwpeterson</a></h6>
+<h6>date: 2015.03.06</h6>
+<h6><a href="/">home</a></h6>
+<hr>
+<h4>Overview</h4>
+<p>So I have used <a href="http://mongoosejs.com/index.html">mongoose</a> a lot,
+since the dawn of time with node. However, recently I have started to use more
+<code>[String]</code> Schema types rather than simply <code>String</code>.</p>
+<p>I ran into some issues getting normal querying to work on those fields, mainly
+because they were arrays.</p>
+<p>After looking into, I found a lot of conflicting opinions and reviews, each
+one using a different syntax. I thought I could write one, defining what someone
+could do in this situation. Obviously there are other ways to do it, but I like this
+syntax, for reasons I will get in to.</p>
+<p>For this article you should roughly know about:</p>
+<ul>
+<li>Promises</li>
+<li>Mongoose</li>
+</ul>
+<h4>Getting Started</h4>
+<p>I am not going to walk you through mongoose or Schema, there are plenty other
+tutorials on that, but lets say that we have a <code>Location</code> Schema with a <code>tags: [String]</code>,
+field. After you have created your Schema, connected to your database,
+we can start looking at the code.
+Note, you need to have your MongoDB up and running for this to work.</p>
+<p><code>npm install --save mongoose</code> to get the mongoose (as of 2015.03.06)</p>
+<p>So lets make our basic example.</p>
+<pre><code class="language-javascript">import mongoose from 'mongoose';
+import Location from './location'; // Our Schema.
+// Connect to the database with a test name.
+mongoose.connect('mongodb://localhost/array-test')
+// Make a query instance.
+const query = Location.find();
+// Quit the app.
+mongoose.connection.close();
+</code></pre>
+<h3>Querying our Arrays</h3>
+<p>Now if you run this after transpiling it with babel, and you run it with good
+old node, you should see a connection appear in your MongoDB terminal.</p>
+<p>But how do we query our data? What is the magic? Well if it was
+just a <code>String</code>, we could simply do a mongoose equals query. But that is not
+what we want.</p>
+<p>First off, we want a want to be able to find documents where
+they contain all the values in their tags fields, such as finding all locations
+that have beaches <em>and</em> kayaking <em>and</em> running. Secondly, we also want to be
+able to find locations that just have one of those tags. Union vs. intersect,
+you remember discrete structures?</p>
+<p>Let's first use the <code>all</code> query helper from mongoose. This is equivalent
+to a <em>and</em> on every field in the query array. So it will find documents that
+include all of the values not just one or more. Note that still pass in an array,
+I just map them to regular expressions for ease of searching.</p>
+<pre><code class="language-javascript">import mongoose from 'mongoose';
+import Location from './location'; // Our Schema.
+// Connect to the database with a test name.
+mongoose.connect('mongodb://localhost/array-test')
+// Some tags to search with.
+const tags = ['biking', 'climb', 'swim']
+
+query
+  .where('tags')
+  .all(tags.map(x =&gt; new RegExp(x, 'ig')));
+
+query
+  .exec()
+  .then(docs =&gt; {
+    console.log(docs);
+    mongoose.connection.close();
+  })
+});
+</code></pre>
+<p>What if we wanted to just find documents with at least one parameter? Well, then we
+use <code>in</code>.</p>
+<pre><code class="language-javascript">import mongoose from 'mongoose';
+import Location from './location'; // Our Schema.
+// Connect to the database with a test name.
+mongoose.connect('mongodb://localhost/array-test')
+// Some tags to search with.
+const tags = ['biking', 'climb', 'swim']
+
+query
+  .where('tags')
+  .in(tags.map(x =&gt; new RegExp(x, 'ig')));
+
+query
+  .exec()
+  .then(docs =&gt; {
+    console.log(docs);
+    mongoose.connection.close();
+  })
+});
+</code></pre>
+<p>But generally, I have one query, with two abilities, so let's see if we can make
+this query more concise and flexible.</p>
+<pre><code class="language-javascript">import mongoose from 'mongoose';
+import Location from './location'; // Our Schema.
+// Connect to the database with a test name.
+mongoose.connect('mongodb://localhost/array-test')
+// Some tags to search with.
+const tags = ['biking', 'climb', 'swim']
+const all = true; // Create a boolean to toggle.
+// Pick the function you want from the boolean.
+const key = all ? 'all' : 'in';
+
+query
+  .where('tags')
+  [key](tags.map(x =&gt; new RegExp(x, 'ig')));
+
+query
+  .exec()
+  .then(docs =&gt; {
+    console.log(docs);
+    mongoose.connection.close();
+  })
+});
+</code></pre>
+<p>So now, we can simply pass a parameter from our query string, or program,
+and we will be able to toggle the ability to query an array by intersection or
+union with another array in mongoose!</p>
+<p>One last thing. If you REALLY want to make it modular, you would want to make it
+handle a single string, or an array of strings (from the client). To do that I added
+this code to my actual code base.</p>
+<pre><code class="language-javascript"> tags = tags.constructor === Array ? tags : [tags]
+</code></pre>
+<p>If you are wondering why I did the equality check the way I did, welcome to the
+oddities of JavaScript and read <a href="http://stackoverflow.com/questions/767486/how-do-you-check-if-a-variable-is-an-array-in-javascript">this</a>
+(I chose performance over <code>Array.isArray</code>)</p>
+<h3>About Me</h3>
+<p>Hi! I am Andrew Peterson, and if you got all the way down here, hopefully you
+learned something. I am super passionate about JavaScript, Dart, Angular and
+anything having to do with Front-End Development. Message me if you have any
+feedback, <a href="https://twitter.com/andrwpeterson">@andrewwpeterson</a>. These articles
+are not designed to be full walk-throughs, or even complete, but more of a
+stepping stone in places I realized there was not a lot of information.</p>
+</div></article><script src="/scripts/prism.js"></script></body></html>
