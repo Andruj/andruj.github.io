@@ -1,0 +1,84 @@
+<modal [(visible)]="showDeleteDialog">
+    <material-dialog class="basic-dialog"
+                     (dismiss)="showDeleteDialog = false"
+                     [autoDismissable]="showDeleteDialog">
+        <h3 header>Confirm Delete</h3>
+        <div class="row">
+            <div class="col s12 no-padding">
+                <div>Are you sure you want to delete {{region.name}}?</div>
+            </div>
+        </div>
+        <div footer>
+            <material-button
+                clear-size
+                (trigger)="delete()"
+                class="red-text">
+                Delete
+            </material-button>
+            <material-button
+                autoFocus
+                clear-size
+                (trigger)="showDeleteDialog = false"
+                class="grey-text text-darken-1">
+                Cancel
+            </material-button>
+        </div>
+    </material-dialog>
+</modal>
+
+
+
+<material-tab-panel (tabChange)="tabChanged($event)" class="negative-margin">
+    <material-tab class="z-depth-0 overflow-y" label="Calendar">
+        <calendar [watchlist]="region.watchlist" [locations]="region.locations" [id]="id"></calendar>
+    </material-tab>
+    <material-tab class="z-depth-0" label="Map">
+        <map [locations]="region.locations" [id]="id"></map>
+    </material-tab>
+    <material-tab class="z-depth-0" label="Details">
+        <details-comp [region]="region" [id]="id"></details-comp>
+    </material-tab>
+</material-tab-panel>
+
+<div class="buttons">
+    <material-fab
+            id="center_location"
+            class="white-text teal lighten-2 scale-transition"
+
+            [class.scale-in]="inMapTab"
+            [class.scale-out]="!inMapTab"
+
+            (click)="center()"
+            mini raised>
+
+        <glyph icon="my_location"></glyph>
+    </material-fab>
+
+    <material-fab
+            id="add_location"
+            class="white-text lighten-2 scale-transition"
+
+            [class.green]="!mapComponent.isAddModeEnabled"
+            [class.grey]="mapComponent.isAddModeEnabled"
+            [class.darken-1]="mapComponent.isAddModeEnabled"
+
+            [class.scale-in]="inMapTab"
+            [class.scale-out]="!inMapTab"
+
+            (click)="toggleAddMode()"
+            mini raised>
+
+        <glyph *ngIf="!mapComponent.isAddModeEnabled" icon="add_location"></glyph>
+        <glyph *ngIf="mapComponent.isAddModeEnabled" icon="clear"></glyph>
+
+    </material-fab>
+
+    <material-fab
+            id="delete"
+            class="red lighten-2 white-text"
+            (click)="showDeleteDialog = true"
+            [disabled]="showDeleteDialog"
+            mini raised>
+        <glyph icon="remove"></glyph>
+    </material-fab>
+</div>

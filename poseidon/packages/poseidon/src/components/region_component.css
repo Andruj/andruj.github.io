@@ -1,0 +1,48 @@
+:host {
+    position: inherit;
+}
+
+.negative-margin {
+    margin-left: -24px;
+    margin-right: -24px;
+}
+
+.buttons {
+    z-index: 1000;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 15px;
+    margin-bottom: -8px;
+}
+
+/* Sets the height for the child tabs. */
+material-tab-panel {
+    position: relative;
+    margin: 0;
+    height: 400px;
+}
+
+/* Removes excess padding on the tabs. */
+material-tab {
+    padding: 0 !important;
+}
+
+map, calendar {
+    height: calc(400px - 48px);
+    width: 100%;
+    padding: 0;
+}
+
+.basic-dialog material-button {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+details-comp {
+    width: 100%;
+}
+
+.overflow-y {
+    overflow-y: scroll;
+}

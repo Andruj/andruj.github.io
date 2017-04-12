@@ -1,0 +1,113 @@
+{
+  "ngDeps": {
+    "1": "pipes",
+    "3": [
+      {
+        "1": "package:angular2/core.dart",
+        "5": false
+      },
+      {
+        "1": "package:logging/logging.dart",
+        "5": false
+      }
+    ],
+    "5": [
+      {
+        "1": "UnitPipe",
+        "4": [
+          {
+            "1": "Pipe",
+            "3": [
+              {
+                "1": "name",
+                "2": "\"units\""
+              }
+            ],
+            "4": false
+          }
+        ]
+      },
+      {
+        "1": "HourPipe",
+        "4": [
+          {
+            "1": "Pipe",
+            "3": [
+              {
+                "1": "name",
+                "2": "\"hour\""
+              }
+            ],
+            "4": false
+          }
+        ]
+      }
+    ],
+    "6": "pipes.dart"
+  },
+  "type": {
+    "appPipes": {
+      "class": "Identifier",
+      "name": "appPipes",
+      "moduleUrl": "asset:poseidon/lib/pipes.dart",
+      "prefix": null,
+      "value": [
+        {
+          "class": "Identifier",
+          "name": "UnitPipe",
+          "moduleUrl": null,
+          "prefix": null,
+          "value": null
+        },
+        {
+          "class": "Identifier",
+          "name": "HourPipe",
+          "moduleUrl": null,
+          "prefix": null,
+          "value": null
+        }
+      ]
+    },
+    "Unit": {
+      "class": "Identifier",
+      "name": "Unit",
+      "moduleUrl": "asset:poseidon/lib/pipes.dart",
+      "prefix": null,
+      "value": null
+    },
+    "UnitPipe": {
+      "class": "Pipe",
+      "type": {
+        "class": "Type",
+        "name": "UnitPipe",
+        "moduleUrl": "asset:poseidon/lib/pipes.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": []
+      },
+      "name": "units",
+      "pure": true
+    },
+    "HourPipe": {
+      "class": "Pipe",
+      "type": {
+        "class": "Type",
+        "name": "HourPipe",
+        "moduleUrl": "asset:poseidon/lib/pipes.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": []
+      },
+      "name": "hour",
+      "pure": true
+    }
+  },
+  "alias": {
+    "appPipes": [
+      "UnitPipe",
+      "HourPipe"
+    ]
+  }
+}

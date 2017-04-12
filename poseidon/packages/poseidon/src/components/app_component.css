@@ -1,0 +1,16 @@
+
+
+.breadcrumb {
+    font-weight: 300;
+    font-size: 1.8em;
+}
+
+.breadcrumb:before {
+    /* blue-grey lighten-1 */
+    color: #607d8b;
+}
+
+.nav-wrapper {
+    padding: 0px 15px;
+}
+

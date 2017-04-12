@@ -1,0 +1,217 @@
+{
+  "ngDeps": {
+    "1": "providers",
+    "3": [
+      {
+        "1": "dart:html",
+        "5": false
+      },
+      {
+        "1": "dart:async",
+        "5": false
+      },
+      {
+        "1": "dart:convert",
+        "5": false
+      },
+      {
+        "1": "dart:collection",
+        "5": false
+      },
+      {
+        "1": "package:angular2/angular2.dart",
+        "5": false
+      },
+      {
+        "1": "package:firebase/firebase.dart",
+        "5": false
+      },
+      {
+        "1": "package:logging/logging.dart",
+        "5": false
+      },
+      {
+        "1": "package:google_maps/google_maps.dart",
+        "5": false
+      },
+      {
+        "1": "package:poseidon/utils.dart",
+        "4": "utils",
+        "5": false
+      }
+    ],
+    "5": [
+      {
+        "1": "Firebase",
+        "4": [
+          {
+            "1": "Injectable",
+            "4": false
+          }
+        ]
+      },
+      {
+        "1": "Geo",
+        "4": [
+          {
+            "1": "Injectable",
+            "4": false
+          }
+        ]
+      },
+      {
+        "1": "Weather",
+        "4": [
+          {
+            "1": "Injectable",
+            "4": false
+          }
+        ]
+      }
+    ],
+    "6": "providers.dart"
+  },
+  "type": {
+    "apiKey": {
+      "class": "Identifier",
+      "name": "apiKey",
+      "moduleUrl": "asset:poseidon/lib/providers.dart",
+      "prefix": null,
+      "value": null
+    },
+    "authDomain": {
+      "class": "Identifier",
+      "name": "authDomain",
+      "moduleUrl": "asset:poseidon/lib/providers.dart",
+      "prefix": null,
+      "value": null
+    },
+    "databaseUrl": {
+      "class": "Identifier",
+      "name": "databaseUrl",
+      "moduleUrl": "asset:poseidon/lib/providers.dart",
+      "prefix": null,
+      "value": null
+    },
+    "storageBucket": {
+      "class": "Identifier",
+      "name": "storageBucket",
+      "moduleUrl": "asset:poseidon/lib/providers.dart",
+      "prefix": null,
+      "value": null
+    },
+    "messagingSenderId": {
+      "class": "Identifier",
+      "name": "messagingSenderId",
+      "moduleUrl": "asset:poseidon/lib/providers.dart",
+      "prefix": null,
+      "value": null
+    },
+    "providers": {
+      "class": "Identifier",
+      "name": "providers",
+      "moduleUrl": "asset:poseidon/lib/providers.dart",
+      "prefix": null,
+      "value": []
+    },
+    "singletons": {
+      "class": "Identifier",
+      "name": "singletons",
+      "moduleUrl": "asset:poseidon/lib/providers.dart",
+      "prefix": null,
+      "value": [
+        {
+          "class": "Identifier",
+          "name": "Firebase",
+          "moduleUrl": null,
+          "prefix": null,
+          "value": null
+        },
+        {
+          "class": "Identifier",
+          "name": "Geo",
+          "moduleUrl": null,
+          "prefix": null,
+          "value": null
+        },
+        {
+          "class": "Identifier",
+          "name": "Weather",
+          "moduleUrl": null,
+          "prefix": null,
+          "value": null
+        }
+      ]
+    },
+    "Firebase": {
+      "class": "Type",
+      "name": "Firebase",
+      "moduleUrl": "asset:poseidon/lib/providers.dart",
+      "prefix": null,
+      "isHost": false,
+      "value": null,
+      "diDeps": []
+    },
+    "Sync": {
+      "class": "Identifier",
+      "name": "Sync",
+      "moduleUrl": "asset:poseidon/lib/providers.dart",
+      "prefix": null,
+      "value": null
+    },
+    "Geo": {
+      "class": "Type",
+      "name": "Geo",
+      "moduleUrl": "asset:poseidon/lib/providers.dart",
+      "prefix": null,
+      "isHost": false,
+      "value": null,
+      "diDeps": []
+    },
+    "Weather": {
+      "class": "Type",
+      "name": "Weather",
+      "moduleUrl": "asset:poseidon/lib/providers.dart",
+      "prefix": null,
+      "isHost": false,
+      "value": null,
+      "diDeps": []
+    },
+    "Forecast": {
+      "class": "Identifier",
+      "name": "Forecast",
+      "moduleUrl": "asset:poseidon/lib/providers.dart",
+      "prefix": null,
+      "value": null
+    },
+    "Snapshot": {
+      "class": "Identifier",
+      "name": "Snapshot",
+      "moduleUrl": "asset:poseidon/lib/providers.dart",
+      "prefix": null,
+      "value": null
+    },
+    "Region": {
+      "class": "Identifier",
+      "name": "Region",
+      "moduleUrl": "asset:poseidon/lib/providers.dart",
+      "prefix": null,
+      "value": null
+    },
+    "Location": {
+      "class": "Identifier",
+      "name": "Location",
+      "moduleUrl": "asset:poseidon/lib/providers.dart",
+      "prefix": null,
+      "value": null
+    }
+  },
+  "alias": {
+    "providers": [],
+    "singletons": [
+      "Firebase",
+      "Geo",
+      "Weather"
+    ]
+  }
+}

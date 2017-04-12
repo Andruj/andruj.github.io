@@ -1,0 +1,23 @@
+<nav    [class.transparent]="isTransparent"
+        [class.white]="!isTransparent"
+        [class.z-depth-0]="isTransparent"
+        [class.z-depth-1]="!isTransparent">
+
+    <div class="nav-wrapper">
+
+        <div class="col s12 black-text">
+            <a href="#" *ngFor="let breadcrumb of breadcrumbs"
+               [class.black-text]="!isTransparent"
+               [class.white-text]="isTransparent"
+               class="breadcrumb quicksand">
+                {{breadcrumb}}
+            </a>
+        </div>
+    </div>
+</nav>
+
+
+<router-outlet></router-outlet>
+
+
+

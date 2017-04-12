@@ -1,0 +1,27 @@
+{
+  "ngDeps": null,
+  "type": {
+    "sum": {
+      "class": "Identifier",
+      "name": "sum",
+      "moduleUrl": "asset:poseidon/lib/utils.dart",
+      "prefix": null,
+      "value": null
+    },
+    "avg": {
+      "class": "Identifier",
+      "name": "avg",
+      "moduleUrl": "asset:poseidon/lib/utils.dart",
+      "prefix": null,
+      "value": null
+    },
+    "key": {
+      "class": "Identifier",
+      "name": "key",
+      "moduleUrl": "asset:poseidon/lib/utils.dart",
+      "prefix": null,
+      "value": null
+    }
+  },
+  "alias": {}
+}

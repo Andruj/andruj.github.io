@@ -1,0 +1,44 @@
+
+
+.basic-dialog material-button {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+material-expansionpanel-set {
+    position: relative;
+}
+
+#newRegion {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 15px;
+    z-index: 9999;
+}
+
+
+/** SVG **/
+svg {
+  position: relative;
+  top: calc((100vh - 64px) / 2);
+  left: 50%;
+  margin-left: calc(-20vw / 2);
+  margin-top: calc(-20vw / 2);
+  width: 20vw;
+  animation: rotation 30s linear infinite;
+}
+svg .one {
+  transition: fill 0.5s;
+}
+svg:hover .one {
+  fill: #EEEEEE;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
