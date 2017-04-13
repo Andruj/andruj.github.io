@@ -405,79 +405,6 @@
       "prefix": null,
       "value": null
     },
-    "LoginComponent": {
-      "class": "Directive",
-      "isComponent": true,
-      "selector": "login",
-      "exportAs": null,
-      "type": {
-        "class": "Type",
-        "name": "LoginComponent",
-        "moduleUrl": "asset:poseidon/lib/components.dart",
-        "prefix": null,
-        "isHost": false,
-        "value": null,
-        "diDeps": [
-          {
-            "token": {
-              "value": null,
-              "identifier": {
-                "class": "Identifier",
-                "name": "Firebase",
-                "moduleUrl": null,
-                "prefix": "app",
-                "value": null
-              },
-              "identifierIsInstance": false
-            },
-            "value": null,
-            "isAttribute": false,
-            "isSelf": false,
-            "isHost": false,
-            "isSkipSelf": false,
-            "isOptional": false,
-            "isValue": false
-          }
-        ]
-      },
-      "changeDetection": 6,
-      "inputs": {},
-      "inputTypes": {},
-      "outputs": {},
-      "hostListeners": {},
-      "hostProperties": {},
-      "hostAttributes": {},
-      "lifecycleHooks": [],
-      "template": {
-        "encapsulation": 0,
-        "template": "<material-button\n        (trigger)=\"login($event)\"\n        raised\n        class=\"white\">\n    <img id=\"googleLogo\" src=\"/logo.jpg\"/>\n    <span>Sign in with Google</span>\n</material-button>",
-        "templateUrl": "asset:poseidon/lib/src/components/login_component.html",
-        "styles": [],
-        "styleUrls": [
-          "asset:poseidon/lib/src/components/login_component.css"
-        ],
-        "ngContentSelectors": []
-      },
-      "providers": [
-        {
-          "class": "Identifier",
-          "name": "materialProviders",
-          "moduleUrl": null,
-          "prefix": null,
-          "value": null
-        },
-        {
-          "class": "Identifier",
-          "name": "providers",
-          "moduleUrl": null,
-          "prefix": "app",
-          "value": null
-        }
-      ],
-      "viewProviders": [],
-      "queries": [],
-      "viewQueries": []
-    },
     "DashboardComponent": {
       "class": "Directive",
       "isComponent": true,
@@ -550,6 +477,186 @@
         "styles": [],
         "styleUrls": [
           "asset:poseidon/lib/src/components/dashboard_component.css"
+        ],
+        "ngContentSelectors": []
+      },
+      "providers": [
+        {
+          "class": "Identifier",
+          "name": "materialProviders",
+          "moduleUrl": null,
+          "prefix": null,
+          "value": null
+        },
+        {
+          "class": "Identifier",
+          "name": "providers",
+          "moduleUrl": null,
+          "prefix": "app",
+          "value": null
+        }
+      ],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    },
+    "AppComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "app",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "AppComponent",
+        "moduleUrl": "asset:poseidon/lib/components.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": [
+          {
+            "token": {
+              "value": null,
+              "identifier": {
+                "class": "Identifier",
+                "name": "Firebase",
+                "moduleUrl": null,
+                "prefix": "app",
+                "value": null
+              },
+              "identifierIsInstance": false
+            },
+            "value": null,
+            "isAttribute": false,
+            "isSelf": false,
+            "isHost": false,
+            "isSkipSelf": false,
+            "isOptional": false,
+            "isValue": false
+          },
+          {
+            "token": {
+              "value": null,
+              "identifier": {
+                "class": "Identifier",
+                "name": "Router",
+                "moduleUrl": null,
+                "prefix": null,
+                "value": null
+              },
+              "identifierIsInstance": false
+            },
+            "value": null,
+            "isAttribute": false,
+            "isSelf": false,
+            "isHost": false,
+            "isSkipSelf": false,
+            "isOptional": false,
+            "isValue": false
+          }
+        ]
+      },
+      "changeDetection": 6,
+      "inputs": {},
+      "inputTypes": {},
+      "outputs": {},
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [],
+      "template": {
+        "encapsulation": 0,
+        "template": "<nav    [class.transparent]=\"isTransparent\"\n        [class.white]=\"!isTransparent\"\n        [class.z-depth-0]=\"isTransparent\"\n        [class.z-depth-1]=\"!isTransparent\">\n\n    <div class=\"nav-wrapper\">\n\n        <div class=\"col s12 black-text\">\n            <a href=\"#\" *ngFor=\"let breadcrumb of breadcrumbs\"\n               [class.black-text]=\"!isTransparent\"\n               [class.white-text]=\"isTransparent\"\n               class=\"breadcrumb quicksand\">\n                {{breadcrumb}}\n            </a>\n        </div>\n    </div>\n</nav>\n\n\n<router-outlet></router-outlet>\n\n\n\n",
+        "templateUrl": "asset:poseidon/lib/src/components/app_component.html",
+        "styles": [],
+        "styleUrls": [
+          "asset:poseidon/lib/src/components/app_component.css"
+        ],
+        "ngContentSelectors": []
+      },
+      "providers": [
+        {
+          "class": "Identifier",
+          "name": "ROUTER_PROVIDERS",
+          "moduleUrl": null,
+          "prefix": null,
+          "value": null
+        },
+        {
+          "class": "Identifier",
+          "name": "materialProviders",
+          "moduleUrl": null,
+          "prefix": null,
+          "value": null
+        },
+        {
+          "class": "Identifier",
+          "name": "singletons",
+          "moduleUrl": null,
+          "prefix": "app",
+          "value": null
+        },
+        {
+          "class": "Identifier",
+          "name": "providers",
+          "moduleUrl": null,
+          "prefix": "app",
+          "value": null
+        }
+      ],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    },
+    "LoginComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "login",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "LoginComponent",
+        "moduleUrl": "asset:poseidon/lib/components.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": [
+          {
+            "token": {
+              "value": null,
+              "identifier": {
+                "class": "Identifier",
+                "name": "Firebase",
+                "moduleUrl": null,
+                "prefix": "app",
+                "value": null
+              },
+              "identifierIsInstance": false
+            },
+            "value": null,
+            "isAttribute": false,
+            "isSelf": false,
+            "isHost": false,
+            "isSkipSelf": false,
+            "isOptional": false,
+            "isValue": false
+          }
+        ]
+      },
+      "changeDetection": 6,
+      "inputs": {},
+      "inputTypes": {},
+      "outputs": {},
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [],
+      "template": {
+        "encapsulation": 0,
+        "template": "<material-button\n        (trigger)=\"login($event)\"\n        raised\n        class=\"white\">\n    <img id=\"googleLogo\" src=\"/logo.jpg\"/>\n    <span>Sign in with Google</span>\n</material-button>",
+        "templateUrl": "asset:poseidon/lib/src/components/login_component.html",
+        "styles": [],
+        "styleUrls": [
+          "asset:poseidon/lib/src/components/login_component.css"
         ],
         "ngContentSelectors": []
       },
@@ -775,58 +882,6 @@
         }
       ]
     },
-    "ProfileComponent": {
-      "class": "Directive",
-      "isComponent": true,
-      "selector": "profile",
-      "exportAs": null,
-      "type": {
-        "class": "Type",
-        "name": "ProfileComponent",
-        "moduleUrl": "asset:poseidon/lib/components.dart",
-        "prefix": null,
-        "isHost": false,
-        "value": null,
-        "diDeps": []
-      },
-      "changeDetection": 6,
-      "inputs": {},
-      "inputTypes": {},
-      "outputs": {},
-      "hostListeners": {},
-      "hostProperties": {},
-      "hostAttributes": {},
-      "lifecycleHooks": [
-        0
-      ],
-      "template": {
-        "encapsulation": 2,
-        "template": "<div class=\"card-panel\">\n    <div class=\"section no-top-padding\">\n        <h5>Notification Settings</h5>\n        <material-checkbox></material-checkbox>\n    </div>\n    <div class=\"divider\"></div>\n    <div class=\"section\">\n        <h5>Wind Settings</h5>\n        <material-radio-group>\n            <material-radio [checked]=\"true\">\n            </material-radio>\n            <material-radio>\n            </material-radio>\n        </material-radio-group>\n\n    </div>\n</div>\n",
-        "templateUrl": "asset:poseidon/lib/src/components/profile_component.html",
-        "styles": [],
-        "styleUrls": [],
-        "ngContentSelectors": []
-      },
-      "providers": [
-        {
-          "class": "Identifier",
-          "name": "materialProviders",
-          "moduleUrl": null,
-          "prefix": null,
-          "value": null
-        },
-        {
-          "class": "Identifier",
-          "name": "providers",
-          "moduleUrl": null,
-          "prefix": "app",
-          "value": null
-        }
-      ],
-      "viewProviders": [],
-      "queries": [],
-      "viewQueries": []
-    },
     "RegionsComponent": {
       "class": "Directive",
       "isComponent": true,
@@ -902,60 +957,19 @@
       "queries": [],
       "viewQueries": []
     },
-    "AppComponent": {
+    "ProfileComponent": {
       "class": "Directive",
       "isComponent": true,
-      "selector": "app",
+      "selector": "profile",
       "exportAs": null,
       "type": {
         "class": "Type",
-        "name": "AppComponent",
+        "name": "ProfileComponent",
         "moduleUrl": "asset:poseidon/lib/components.dart",
         "prefix": null,
         "isHost": false,
         "value": null,
-        "diDeps": [
-          {
-            "token": {
-              "value": null,
-              "identifier": {
-                "class": "Identifier",
-                "name": "Firebase",
-                "moduleUrl": null,
-                "prefix": "app",
-                "value": null
-              },
-              "identifierIsInstance": false
-            },
-            "value": null,
-            "isAttribute": false,
-            "isSelf": false,
-            "isHost": false,
-            "isSkipSelf": false,
-            "isOptional": false,
-            "isValue": false
-          },
-          {
-            "token": {
-              "value": null,
-              "identifier": {
-                "class": "Identifier",
-                "name": "Router",
-                "moduleUrl": null,
-                "prefix": null,
-                "value": null
-              },
-              "identifierIsInstance": false
-            },
-            "value": null,
-            "isAttribute": false,
-            "isSelf": false,
-            "isHost": false,
-            "isSkipSelf": false,
-            "isOptional": false,
-            "isValue": false
-          }
-        ]
+        "diDeps": []
       },
       "changeDetection": 6,
       "inputs": {},
@@ -964,37 +978,23 @@
       "hostListeners": {},
       "hostProperties": {},
       "hostAttributes": {},
-      "lifecycleHooks": [],
+      "lifecycleHooks": [
+        0
+      ],
       "template": {
-        "encapsulation": 0,
-        "template": "<nav    [class.transparent]=\"isTransparent\"\n        [class.white]=\"!isTransparent\"\n        [class.z-depth-0]=\"isTransparent\"\n        [class.z-depth-1]=\"!isTransparent\">\n\n    <div class=\"nav-wrapper\">\n\n        <div class=\"col s12 black-text\">\n            <a href=\"#\" *ngFor=\"let breadcrumb of breadcrumbs\"\n               [class.black-text]=\"!isTransparent\"\n               [class.white-text]=\"isTransparent\"\n               class=\"breadcrumb quicksand\">\n                {{breadcrumb}}\n            </a>\n        </div>\n    </div>\n</nav>\n\n\n<router-outlet></router-outlet>\n\n\n\n",
-        "templateUrl": "asset:poseidon/lib/src/components/app_component.html",
+        "encapsulation": 2,
+        "template": "<div class=\"card-panel\">\n    <div class=\"section no-top-padding\">\n        <h5>Notification Settings</h5>\n        <material-checkbox></material-checkbox>\n    </div>\n    <div class=\"divider\"></div>\n    <div class=\"section\">\n        <h5>Wind Settings</h5>\n        <material-radio-group>\n            <material-radio [checked]=\"true\">\n            </material-radio>\n            <material-radio>\n            </material-radio>\n        </material-radio-group>\n\n    </div>\n</div>\n",
+        "templateUrl": "asset:poseidon/lib/src/components/profile_component.html",
         "styles": [],
-        "styleUrls": [
-          "asset:poseidon/lib/src/components/app_component.css"
-        ],
+        "styleUrls": [],
         "ngContentSelectors": []
       },
       "providers": [
         {
           "class": "Identifier",
-          "name": "ROUTER_PROVIDERS",
-          "moduleUrl": null,
-          "prefix": null,
-          "value": null
-        },
-        {
-          "class": "Identifier",
           "name": "materialProviders",
           "moduleUrl": null,
           "prefix": null,
-          "value": null
-        },
-        {
-          "class": "Identifier",
-          "name": "singletons",
-          "moduleUrl": null,
-          "prefix": "app",
           "value": null
         },
         {
@@ -1145,109 +1145,6 @@
         }
       ]
     },
-    "SnapshotComponent": {
-      "class": "Directive",
-      "isComponent": true,
-      "selector": "snapshot",
-      "exportAs": null,
-      "type": {
-        "class": "Type",
-        "name": "SnapshotComponent",
-        "moduleUrl": "asset:poseidon/lib/components.dart",
-        "prefix": null,
-        "isHost": false,
-        "value": null,
-        "diDeps": [
-          {
-            "token": {
-              "value": null,
-              "identifier": {
-                "class": "Identifier",
-                "name": "Firebase",
-                "moduleUrl": null,
-                "prefix": "app",
-                "value": null
-              },
-              "identifierIsInstance": false
-            },
-            "value": null,
-            "isAttribute": false,
-            "isSelf": false,
-            "isHost": false,
-            "isSkipSelf": false,
-            "isOptional": false,
-            "isValue": false
-          }
-        ]
-      },
-      "changeDetection": 6,
-      "inputs": {
-        "regionId": "regionId",
-        "watching": "watching",
-        "watchlistId": "watchlistId",
-        "ceiling": "ceiling",
-        "snapshot": "snapshot"
-      },
-      "inputTypes": {
-        "regionId": " String",
-        "watching": " bool",
-        "watchlistId": " String",
-        "ceiling": " app.Snapshot",
-        "snapshot": " app.Snapshot"
-      },
-      "outputs": {
-        "onSelect": "select"
-      },
-      "hostListeners": {},
-      "hostProperties": {},
-      "hostAttributes": {},
-      "lifecycleHooks": [
-        3
-      ],
-      "template": {
-        "encapsulation": 0,
-        "template": "<div class=\"card-panel grey lighten-3 z-depth-0\"\n        [class.darken-3]=\"watching\"\n        [class.white-text]=\"watching\"\n        [class.watching]=\"watching\"\n        (click)=\"select()\">\n        <div class=\"wind-overlay\" #windOverlay>\n\n        </div>\n        <span class=\"time grey-text\"\n                [class.text-darken-1]=\"!watching\"\n                [class.text-lighten-1]=\"watching\">\n                {{snapshot.time.hour | hour}}\n        </span>\n        <span class=\"wind\">{{snapshot.wind | units:'mph'}}</span>\n\n</div>",
-        "templateUrl": "asset:poseidon/lib/src/components/snapshot_component.html",
-        "styles": [],
-        "styleUrls": [
-          "asset:poseidon/lib/src/components/snapshot_component.css"
-        ],
-        "ngContentSelectors": []
-      },
-      "providers": [
-        {
-          "class": "Identifier",
-          "name": "materialProviders",
-          "moduleUrl": null,
-          "prefix": null,
-          "value": null
-        },
-        {
-          "class": "Identifier",
-          "name": "providers",
-          "moduleUrl": null,
-          "prefix": "app",
-          "value": null
-        }
-      ],
-      "viewProviders": [],
-      "queries": [],
-      "viewQueries": [
-        {
-          "selectors": [
-            {
-              "value": "windOverlay",
-              "identifier": null,
-              "identifierIsInstance": false
-            }
-          ],
-          "descendants": true,
-          "first": true,
-          "propertyName": "overlayReference",
-          "read": null
-        }
-      ]
-    },
     "CalendarComponent": {
       "class": "Directive",
       "isComponent": true,
@@ -1350,6 +1247,109 @@
       "viewProviders": [],
       "queries": [],
       "viewQueries": []
+    },
+    "SnapshotComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "snapshot",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "SnapshotComponent",
+        "moduleUrl": "asset:poseidon/lib/components.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": [
+          {
+            "token": {
+              "value": null,
+              "identifier": {
+                "class": "Identifier",
+                "name": "Firebase",
+                "moduleUrl": null,
+                "prefix": "app",
+                "value": null
+              },
+              "identifierIsInstance": false
+            },
+            "value": null,
+            "isAttribute": false,
+            "isSelf": false,
+            "isHost": false,
+            "isSkipSelf": false,
+            "isOptional": false,
+            "isValue": false
+          }
+        ]
+      },
+      "changeDetection": 6,
+      "inputs": {
+        "regionId": "regionId",
+        "watching": "watching",
+        "watchlistId": "watchlistId",
+        "ceiling": "ceiling",
+        "snapshot": "snapshot"
+      },
+      "inputTypes": {
+        "regionId": " String",
+        "watching": " bool",
+        "watchlistId": " String",
+        "ceiling": " app.Snapshot",
+        "snapshot": " app.Snapshot"
+      },
+      "outputs": {
+        "onSelect": "select"
+      },
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [
+        3
+      ],
+      "template": {
+        "encapsulation": 0,
+        "template": "<div class=\"card-panel grey lighten-3 z-depth-0\"\n        [class.darken-3]=\"watching\"\n        [class.white-text]=\"watching\"\n        [class.watching]=\"watching\"\n        (click)=\"select()\">\n        <div class=\"wind-overlay\" #windOverlay>\n\n        </div>\n        <span class=\"time grey-text\"\n                [class.text-darken-1]=\"!watching\"\n                [class.text-lighten-1]=\"watching\">\n                {{snapshot.time.hour | hour}}\n        </span>\n        <span class=\"wind\">{{snapshot.wind | units:'mph'}}</span>\n\n</div>",
+        "templateUrl": "asset:poseidon/lib/src/components/snapshot_component.html",
+        "styles": [],
+        "styleUrls": [
+          "asset:poseidon/lib/src/components/snapshot_component.css"
+        ],
+        "ngContentSelectors": []
+      },
+      "providers": [
+        {
+          "class": "Identifier",
+          "name": "materialProviders",
+          "moduleUrl": null,
+          "prefix": null,
+          "value": null
+        },
+        {
+          "class": "Identifier",
+          "name": "providers",
+          "moduleUrl": null,
+          "prefix": "app",
+          "value": null
+        }
+      ],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": [
+        {
+          "selectors": [
+            {
+              "value": "windOverlay",
+              "identifier": null,
+              "identifierIsInstance": false
+            }
+          ],
+          "descendants": true,
+          "first": true,
+          "propertyName": "overlayReference",
+          "read": null
+        }
+      ]
     }
   },
   "alias": {
