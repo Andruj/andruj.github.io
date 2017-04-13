@@ -405,101 +405,6 @@
       "prefix": null,
       "value": null
     },
-    "DashboardComponent": {
-      "class": "Directive",
-      "isComponent": true,
-      "selector": "dashboard",
-      "exportAs": null,
-      "type": {
-        "class": "Type",
-        "name": "DashboardComponent",
-        "moduleUrl": "asset:poseidon/lib/components.dart",
-        "prefix": null,
-        "isHost": false,
-        "value": null,
-        "diDeps": [
-          {
-            "token": {
-              "value": null,
-              "identifier": {
-                "class": "Identifier",
-                "name": "Firebase",
-                "moduleUrl": null,
-                "prefix": "app",
-                "value": null
-              },
-              "identifierIsInstance": false
-            },
-            "value": null,
-            "isAttribute": false,
-            "isSelf": false,
-            "isHost": false,
-            "isSkipSelf": false,
-            "isOptional": false,
-            "isValue": false
-          },
-          {
-            "token": {
-              "value": null,
-              "identifier": {
-                "class": "Identifier",
-                "name": "Router",
-                "moduleUrl": null,
-                "prefix": null,
-                "value": null
-              },
-              "identifierIsInstance": false
-            },
-            "value": null,
-            "isAttribute": false,
-            "isSelf": false,
-            "isHost": false,
-            "isSkipSelf": false,
-            "isOptional": false,
-            "isValue": false
-          }
-        ]
-      },
-      "changeDetection": 6,
-      "inputs": {},
-      "inputTypes": {},
-      "outputs": {},
-      "hostListeners": {},
-      "hostProperties": {},
-      "hostAttributes": {},
-      "lifecycleHooks": [
-        0
-      ],
-      "template": {
-        "encapsulation": 0,
-        "template": "<div class=\"container-full\">\n    <div class=\"row\">\n        <div class=\"col s0 m3 l2 no-padding\">\n            <div class=\"card sidebar\">\n                <div class=\"card-image\">\n                    <img src=\"{{photoUrl}}\">\n                    <div class=\"photo-overlay\"></div>\n                    <span class=\"hide-on-med-and-down truncate card-title quicksand\">{{displayName}}</span>\n                </div>\n                <material-button\n                        (click)=\"navigateTo('./Regions')\"\n                        [class.lighten-1]=\"isSelected\"\n                        [class.blue-grey]=\"isSelected\"\n                        class=\"card-action\">\n                    <a      [class.white-text]=\"isSelected\"\n                            class=\"blue-grey-text\">Regions</a>\n                </material-button>\n                <material-button (click)=\"navigateTo('./Profile')\" class=\"card-action\">\n                    <a class=\"blue-grey-text\">Profile</a>\n                </material-button>\n                <div class=\"card-action\"></div>\n            </div>\n        </div>\n        <div class=\"col s12 m9 l10 scrollable calc-height\">\n            <div class=\"row view-padding\">\n               <router-outlet></router-outlet>\n            </div>\n        </div>\n    </div>\n</div>",
-        "templateUrl": "asset:poseidon/lib/src/components/dashboard_component.html",
-        "styles": [],
-        "styleUrls": [
-          "asset:poseidon/lib/src/components/dashboard_component.css"
-        ],
-        "ngContentSelectors": []
-      },
-      "providers": [
-        {
-          "class": "Identifier",
-          "name": "materialProviders",
-          "moduleUrl": null,
-          "prefix": null,
-          "value": null
-        },
-        {
-          "class": "Identifier",
-          "name": "providers",
-          "moduleUrl": null,
-          "prefix": "app",
-          "value": null
-        }
-      ],
-      "viewProviders": [],
-      "queries": [],
-      "viewQueries": []
-    },
     "AppComponent": {
       "class": "Directive",
       "isComponent": true,
@@ -680,14 +585,14 @@
       "queries": [],
       "viewQueries": []
     },
-    "DetailsComponent": {
+    "DashboardComponent": {
       "class": "Directive",
       "isComponent": true,
-      "selector": "details-comp",
+      "selector": "dashboard",
       "exportAs": null,
       "type": {
         "class": "Type",
-        "name": "DetailsComponent",
+        "name": "DashboardComponent",
         "moduleUrl": "asset:poseidon/lib/components.dart",
         "prefix": null,
         "isHost": false,
@@ -712,18 +617,32 @@
             "isSkipSelf": false,
             "isOptional": false,
             "isValue": false
+          },
+          {
+            "token": {
+              "value": null,
+              "identifier": {
+                "class": "Identifier",
+                "name": "Router",
+                "moduleUrl": null,
+                "prefix": null,
+                "value": null
+              },
+              "identifierIsInstance": false
+            },
+            "value": null,
+            "isAttribute": false,
+            "isSelf": false,
+            "isHost": false,
+            "isSkipSelf": false,
+            "isOptional": false,
+            "isValue": false
           }
         ]
       },
       "changeDetection": 6,
-      "inputs": {
-        "region": "region",
-        "id": "id"
-      },
-      "inputTypes": {
-        "region": " app.Region",
-        "id": " String"
-      },
+      "inputs": {},
+      "inputTypes": {},
       "outputs": {},
       "hostListeners": {},
       "hostProperties": {},
@@ -733,11 +652,11 @@
       ],
       "template": {
         "encapsulation": 0,
-        "template": "<div class=\"row region-settings\">\n    <form class=\"col s12\">\n        <div class=\"row\">\n            <div class=\"col s6 input-field\">\n                <input [(ngModel)]=\"region.name\" id=\"name\" (ngModelChange)=\"update()\"/>\n                <label class=\"active\" for=\"name\">Region Name</label>\n            </div>\n        </div>\n        <div class=\"row\">\n            <!--<div class=\"col s3\">-->\n                <!--<label>Threshold</label>-->\n                <!--<select class=\"browser-default\" [(ngModel)]=\"region.direction\" (ngModelChange)=\"update()\">-->\n                    <!--<option selected [ngValue]=\"region.MAX\">Higher than</option>-->\n                    <!--<option [ngValue]=\"region.MIN\">Slower than</option>-->\n                <!--</select>-->\n\n            <!--</div>-->\n            <!--<div class=\"col s9 input-field\">-->\n\n                <!--<input [(ngModel)]=\"region.wind\" id=\"wind\" (ngModelChange)=\"update()\"/>-->\n                <!--<label class=\"active\" for=\"name\">{{region.direction == region.MAX ? \"Max Windspeed\" : \"Min Windspeed\"}}</label>-->\n            <!--</div>-->\n            <div class=\"col s6 input-field\">\n            </div>\n        </div>\n    </form>\n</div>",
-        "templateUrl": "asset:poseidon/lib/src/components/details_component.html",
+        "template": "<div class=\"container-full\">\n    <div class=\"row\">\n        <div class=\"col s0 m3 l2 no-padding\">\n            <div class=\"card sidebar\">\n                <div class=\"card-image\">\n                    <img src=\"{{photoUrl}}\">\n                    <div class=\"photo-overlay\"></div>\n                    <span class=\"hide-on-med-and-down truncate card-title quicksand\">{{displayName}}</span>\n                </div>\n                <material-button\n                        (click)=\"navigateTo('./Regions')\"\n                        [class.lighten-1]=\"isSelected\"\n                        [class.blue-grey]=\"isSelected\"\n                        class=\"card-action\">\n                    <a      [class.white-text]=\"isSelected\"\n                            class=\"blue-grey-text\">Regions</a>\n                </material-button>\n                <material-button (click)=\"navigateTo('./Profile')\" class=\"card-action\">\n                    <a class=\"blue-grey-text\">Profile</a>\n                </material-button>\n                <div class=\"card-action\"></div>\n            </div>\n        </div>\n        <div class=\"col s12 m9 l10 scrollable calc-height\">\n            <div class=\"row view-padding\">\n               <router-outlet></router-outlet>\n            </div>\n        </div>\n    </div>\n</div>",
+        "templateUrl": "asset:poseidon/lib/src/components/dashboard_component.html",
         "styles": [],
         "styleUrls": [
-          "asset:poseidon/lib/src/components/details_component.css"
+          "asset:poseidon/lib/src/components/dashboard_component.css"
         ],
         "ngContentSelectors": []
       },
@@ -1225,6 +1144,87 @@
         "styles": [],
         "styleUrls": [
           "asset:poseidon/lib/src/components/calendar_component.css"
+        ],
+        "ngContentSelectors": []
+      },
+      "providers": [
+        {
+          "class": "Identifier",
+          "name": "materialProviders",
+          "moduleUrl": null,
+          "prefix": null,
+          "value": null
+        },
+        {
+          "class": "Identifier",
+          "name": "providers",
+          "moduleUrl": null,
+          "prefix": "app",
+          "value": null
+        }
+      ],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    },
+    "DetailsComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "details-comp",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "DetailsComponent",
+        "moduleUrl": "asset:poseidon/lib/components.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": [
+          {
+            "token": {
+              "value": null,
+              "identifier": {
+                "class": "Identifier",
+                "name": "Firebase",
+                "moduleUrl": null,
+                "prefix": "app",
+                "value": null
+              },
+              "identifierIsInstance": false
+            },
+            "value": null,
+            "isAttribute": false,
+            "isSelf": false,
+            "isHost": false,
+            "isSkipSelf": false,
+            "isOptional": false,
+            "isValue": false
+          }
+        ]
+      },
+      "changeDetection": 6,
+      "inputs": {
+        "region": "region",
+        "id": "id"
+      },
+      "inputTypes": {
+        "region": " app.Region",
+        "id": " String"
+      },
+      "outputs": {},
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [
+        0
+      ],
+      "template": {
+        "encapsulation": 0,
+        "template": "<div class=\"row region-settings\">\n    <form class=\"col s12\">\n        <div class=\"row\">\n            <div class=\"col s6 input-field\">\n                <input [(ngModel)]=\"region.name\" id=\"name\" (ngModelChange)=\"update()\"/>\n                <label class=\"active\" for=\"name\">Region Name</label>\n            </div>\n        </div>\n        <div class=\"row\">\n            <!--<div class=\"col s3\">-->\n                <!--<label>Threshold</label>-->\n                <!--<select class=\"browser-default\" [(ngModel)]=\"region.direction\" (ngModelChange)=\"update()\">-->\n                    <!--<option selected [ngValue]=\"region.MAX\">Higher than</option>-->\n                    <!--<option [ngValue]=\"region.MIN\">Slower than</option>-->\n                <!--</select>-->\n\n            <!--</div>-->\n            <!--<div class=\"col s9 input-field\">-->\n\n                <!--<input [(ngModel)]=\"region.wind\" id=\"wind\" (ngModelChange)=\"update()\"/>-->\n                <!--<label class=\"active\" for=\"name\">{{region.direction == region.MAX ? \"Max Windspeed\" : \"Min Windspeed\"}}</label>-->\n            <!--</div>-->\n            <div class=\"col s6 input-field\">\n            </div>\n        </div>\n    </form>\n</div>",
+        "templateUrl": "asset:poseidon/lib/src/components/details_component.html",
+        "styles": [],
+        "styleUrls": [
+          "asset:poseidon/lib/src/components/details_component.css"
         ],
         "ngContentSelectors": []
       },
